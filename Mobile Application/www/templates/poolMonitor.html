@@ -1,0 +1,20 @@
+<ion-view title="Pool Monitor" id="page2">
+  <ion-content padding="true" class="has-header">
+    <div id="poolMonitor-container4">
+      <h2 id="poolMonitor-heading1" style="color:#000000;">Swimming Pool #1</h2>
+      <h4 id="poolMonitor-heading2" style="color:#000000;">Live feed:</h4>
+    </div>
+    <div ng-init="videourl_video1=&quot;https://www.youtube.com/embed/lTLTs2ZA2JQ?rel=0&amp;showinfo=0&quot;" style="position:relative;overflow:hidden;padding-bottom:56.25%;height:0;" id="poolMonitor-video1">
+      <iframe src="{{videourl_video1}}" frameborder="0" allowfullscreen="" width="560" height="315" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+    </div>
+    <div id="poolMonitor-container1">
+      <h4 id="poolMonitor-heading3" style="color:#000000;">Feed Information:</h4>
+      <h5 id="poolMonitor-heading4" style="color:#000000;">Date:</h5>
+      <h5 id="poolMonitor-heading5" style="color:#000000;">Bit Rate:</h5>
+    </div>
+    <div id="poolMonitor-container3">
+      <button id="poolMonitor-button2" class="button button-dark button-block">View Video from Another Date</button>
+      <button id="poolMonitor-button1" class="button button-dark button-block">Archive Today's Footage</button>
+    </div>
+  </ion-content>
+</ion-view>
