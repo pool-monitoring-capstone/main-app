@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.PlaceholderFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="800dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/monitoringText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Monitoring and Notification Settings"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <TextView
+                android:id="@+id/whatToMonitorText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="What to Monitor:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+            <View
+                android:id="@+id/divider11"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="?android:attr/listDivider"
+                android:visibility="invisible" />
+
+            <CheckBox
+                android:id="@+id/potDrownButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Drowning" />
+
+            <CheckBox
+                android:id="@+id/unsafePlayButton"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:text="Unsafe Behaviour" />
+
+            <CheckBox
+                android:id="@+id/afterHoursButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="After Hours Detection" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="?android:attr/listDivider"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/alertAuthoritiesText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Emergency Services:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+            <View
+                android:id="@+id/divider12"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="?android:attr/listDivider"
+                android:visibility="invisible" />
+
+            <CheckBox
+                android:id="@+id/emergButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Allow 911 to be Called" />
+
+            <View
+                android:id="@+id/divider13"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="?android:attr/listDivider"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/videoSettingsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Video Settings"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <TextView
+                android:id="@+id/bitRateText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Desired Video Bit RateTextView"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+            <View
+                android:id="@+id/divider14"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="?android:attr/listDivider"
+                android:visibility="invisible" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="140dp">
+
+                <RadioButton
+                    android:id="@+id/button240"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="240p" />
+
+                <RadioButton
+                    android:id="@+id/button360"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="360p" />
+
+                <RadioButton
+                    android:id="@+id/button480"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="480p" />
+
+                <RadioButton
+                    android:id="@+id/button720"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="720p" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/settingsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save Settings" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
