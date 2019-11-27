@@ -1,7 +1,10 @@
 package com.example.swimmingpoolmonitor.ui.main;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +14,7 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,6 +23,11 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import com.example.swimmingpoolmonitor.MainActivity;
 import com.example.swimmingpoolmonitor.R;
 import com.example.swimmingpoolmonitor.Setting;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -64,10 +73,19 @@ public class PlaceholderFragment extends Fragment {
         //Monitor Stream View
         if (index == 1) {
             View root = inflater.inflate(R.layout.fragment_monitor, container, false);
+            //Set Date
+            DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+            Date date = new Date();
+            TextView dateTextView = (TextView)root.findViewById(R.id.DateField);
+            dateTextView.setText("Date: " + dateFormat.format(date));
+
+            //Set Frame Rate
+            TextView fpsTextView = (TextView)root.findViewById(R.id.frameRateField);
+            fpsTextView.setText("Frame Rate: 1 fps");
 
             final WebView myWebView = (WebView) root.findViewById(R.id.webView1);
 
-            String frameVideo =  "http://192.168.0.28:8080/stream_simple.html";
+            String frameVideo =  "http://192.168.43.91:8080/stream_simple.html";
             myWebView.setWebChromeClient(new WebChromeClient());
             WebSettings webSettings = myWebView.getSettings();
             webSettings.setJavaScriptEnabled(true);
